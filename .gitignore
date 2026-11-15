@@ -1,0 +1,8 @@
+.deps/
+.venv/
+.run/
+__pycache__/
+node_modules/
+static/assets/
+data/
+.env
