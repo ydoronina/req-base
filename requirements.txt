@@ -1,0 +1,7 @@
+fastapi>=0.115,<1
+fastapi-offline==1.7.7
+uvicorn>=0.34,<1
+mcp>=1.20,<2
+httpx>=0.28,<1
+markdown-it-py>=3,<5
+weasyprint>=70,<71

@@ -1,0 +1,9 @@
+.git
+.deps
+.venv
+.run
+node_modules
+data
+static/assets
+.env
+**/__pycache__

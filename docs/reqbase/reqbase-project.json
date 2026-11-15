@@ -1,0 +1,3704 @@
+{
+  "schema_version": 1,
+  "project": {
+    "id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+    "version": 1,
+    "created_at": "2026-11-15T11:12:50.248+00:00",
+    "updated_at": "2026-11-15T11:14:28.972+00:00",
+    "deleted_at": null,
+    "created_by": "ai:codex-analyst",
+    "updated_by": "ai:codex-analyst",
+    "requirements": [
+      {
+        "id": "042b127a-831a-4186-b062-964414b86c4a",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[B01] Единый реестр требований",
+        "description": "Аналитик ведёт каждый проект в одном реестре, от бизнес-потребности до проверяемых условий реализации.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "в сценарии с двумя проектами аналитик находит и меняет нужное требование; данные другого проекта не меняются."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "B01",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "BR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "BR 1",
+        "parent_id": null,
+        "order": 0
+      },
+      {
+        "id": "114674fb-2857-40a3-ac27-1f057b0289d3",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F01] Управление проектами",
+        "description": "Создавать и редактировать проект с языком документа и реквизитами титульного листа, переключаться между проектами, удалять и восстанавливать проект.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "после восстановления доступен тот же проект с тем же UUID и его каталогом; требования и связи другого проекта не меняются."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F01",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 1.1",
+        "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+        "order": 0
+      },
+      {
+        "id": "f35d1752-77eb-40da-aaed-12231f6db0b9",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F02] Карточка требования и иерархия",
+        "description": "Хранить название, описание, тип, источник, статус, приоритет, критерии приёмки и теги. BR — корень; FR/NFR — потомки BR. Переносить и упорядочивать ветки, сохраняя UUID и пересчитывая позиционные коды.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "после переноса FR под другое BR его UUID и связи сохраняются, отображаемый код меняется; попытка переместить ветку под её потомка отклоняется."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F02",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 1.2",
+        "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+        "order": 1
+      },
+      {
+        "id": "40a35548-59cd-43fd-8f2d-38a2bfe8823e",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F03] Поиск и рабочие представления",
+        "description": "Открывать реестр деревом, таблицей или канбаном. Искать по коду, названию, описанию, источнику, тегам и критериям; фильтровать записи и сохранять рабочие представления.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "при поиске совпавшее дочернее требование видно вместе с предками; сохранённое представление повторно открывается с выбранным режимом и фильтрами."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F03",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 1.3",
+        "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+        "order": 2
+      },
+      {
+        "id": "ba42dbce-b88c-44b1-972f-37b6181a41d0",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[N01] Скорость работы с каталогом",
+        "description": "Стартовый профиль нагрузки: 5 проектов по 1 000 активных требований, дерево глубиной до 6, один аналитик и один MCP-клиент. Зафиксировать конфигурацию стенда перед измерением.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "p95 открытия дерева и серверного поиска ≤ 2 с, p95 одиночной правки ≤ 1 с на локальном стенде после прогрева; замер по 30 операциям каждого вида, без рендера и экспорта."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "N01",
+          "предложено"
+        ],
+        "status": "Draft",
+        "priority": "Should",
+        "type": "NFR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "NFR 1.4",
+        "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+        "order": 3
+      },
+      {
+        "id": "cadb9fd7-5806-4973-93f6-6aa581ab42c2",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[N02] Язык и работа с клавиатуры",
+        "description": "Поддерживать RU/EN и кириллицу. Выполнение базового сценария через клавиатуру должно быть доступно с видимым фокусом.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "на RU и EN открыть каталог, найти строку, открыть карточку, создать и отредактировать требование без мыши; данные с кириллицей сохраняются после перезагрузки."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "N02",
+          "частично"
+        ],
+        "status": "Draft",
+        "priority": "Should",
+        "type": "NFR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "NFR 1.5",
+        "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+        "order": 4
+      },
+      {
+        "id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[B02] Проверяемое согласование и покрытие",
+        "description": "Аналитик видит, зачем нужно каждое требование, каких деталей не хватает и что готово к работе. Согласование выполняется вручную сменой статуса на Approved.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "по выбранной цели видны FR/NFR и пробелы; аналитик может перевести требование в Approved и увидеть его в отборе согласованных."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "B02",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "BR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "BR 2",
+        "parent_id": null,
+        "order": 1
+      },
+      {
+        "id": "23aae6fe-2762-439d-ba9f-f6a5d725a07b",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F04] Статусы, приоритеты и обсуждение",
+        "description": "Поддерживать Draft, In Review, Approved, Implemented, Rejected и приоритеты Must, Should, Could, Won't. Поддерживать комментарии к требованию. Аналитик ставит Approved в UI либо явно поручает это ассистенту. Это правило работы ассистента: сервер сейчас не проверяет наличие пользовательской команды. Обязательные переходы не заданы.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "новое требование без явного статуса создаётся в Draft, аналитик добавляет комментарий и меняет статус на Approved; изменение статуса отражается в истории требования."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F04",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 2.1",
+        "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "order": 0
+      },
+      {
+        "id": "a4cee6b1-ccf8-427c-9995-333a9fb2fb96",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F05] Матрица и диагностика пробелов",
+        "description": "Показывать BR и его FR/NFR независимо от глубины вложения. Выявлять BR без FR, FR без BR, записи без критериев, BR без схем и Must в Draft. Трассировка по дереву и явные связи — разные механизмы.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "после добавления FR к пустому BR исчезает признак «BR без FR»; Must/Draft с пустым списком критериев попадает в обе соответствующие проверки."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F05",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 2.2",
+        "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "order": 1
+      },
+      {
+        "id": "985f45d5-cf50-4b46-aebb-3775ee30d8c5",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F06] Схемы и связи",
+        "description": "Хранить редактируемые Mermaid/PlantUML, указывать вид схемы, связывать её с одним или несколькими требованиями; задавать depends_on, relates_to и conflicts_with. Предусмотреть просмотр и выгрузку рисунка.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "схема видна в двух связанных карточках; ссылка за пределы проекта или на то же требование отклоняется; при доступном рендере схема скачивается как SVG/PNG."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F06",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 2.3",
+        "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "order": 2
+      },
+      {
+        "id": "e3a2e27c-de3b-4d0a-82da-5ee2eca5a101",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[N03] Работа при недоступности рендера",
+        "description": "Сохранение и чтение требований и исходников схем не должны зависеть от Kroki. Ошибка синтаксиса отличима от недоступности рендера; для Mermaid доступен локальный просмотр.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "отключить Kroki, сохранить и прочитать требование и схему; Mermaid открывается в локальном просмотре, а серверная операция для новой некэшированной схемы сообщает о проблеме рендера."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "N03",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Should",
+        "type": "NFR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "NFR 2.4",
+        "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "order": 3
+      },
+      {
+        "id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[B03] Совместная работа аналитика и ИИ",
+        "description": "ИИ напрямую обновляет тот же реестр через MCP. Аналитик видит результат, понимает происхождение изменения и может восстановить прежнее состояние в согласованных границах аудита.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "MCP меняет запись; аналитик находит событие в UI, видит автора, канал и правку, затем возвращает прежнее состояние."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "B03",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "BR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "BR 3",
+        "parent_id": null,
+        "order": 2
+      },
+      {
+        "id": "2de07e0b-ff64-4ef5-8d05-b4e167bdf580",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F07] Чтение и запись через MCP и REST",
+        "description": "Предоставлять HTTP MCP и stdio, а также REST API с OpenAPI. Использовать общую модель данных. Поддерживать поиск/чтение и пакетное создание/правку требований; для мутаций предоставить предварительный прогон, где он предусмотрен контрактом.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "MCP показывает дерево, пакетный dry_run не создаёт записей, обычный вызов создаёт записи, а UI и REST читают эти же UUID."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F07",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 3.1",
+        "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "order": 0
+      },
+      {
+        "id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+        "version": 3,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.556+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F08] Аудит и откат правок",
+        "description": "Для правки требования показывать автора, канал, время и состояния до/после. Откатывать отдельное требование по событию его истории; откат оставляет новое событие. Пакет можно править атомарно, обратная операция выбирается отдельно по требованию.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "после MCP-правки требование возвращено к состоянию до выбранного события; аудит содержит обе операции."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F08",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 3.2",
+        "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "order": 1
+      },
+      {
+        "id": "52000ed1-2ed0-4191-aa12-ca1f180cd7c5",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F09] Корзина и восстановление ветки",
+        "description": "Удалять проект или ветку обратимо. Для ветки восстанавливать записи, удалённые одной операцией, и их идентичность; учитывать состояние родителя.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "удалённая ветка исчезает из дерева; после восстановления вернулись исходные UUID и ассоциации. Независимо удалённая ранее запись не восстанавливается вместе с веткой."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F09",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 3.3",
+        "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "order": 2
+      },
+      {
+        "id": "54c18f40-4887-4603-8c94-2b2510523068",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[N04] Защита от потери правок",
+        "description": "Проверять версию изменяемой записи и выполнять изменение требований, пересчёт кодов и аудит атомарно. Пакет не должен сохраняться частично. В REST при конфликте возвращать 409 и текущую запись.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "из двух параллельных правок с одной версией принимается одна; вторая получает конфликт. Пакет с некорректным элементом не оставляет новых записей или событий."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "N04",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "NFR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "NFR 3.4",
+        "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "order": 3
+      },
+      {
+        "id": "f371832f-8228-418b-be22-031818f74407",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[N05] Локальный доступ и защита интерфейсов",
+        "description": "По умолчанию публиковать приложение на loopback. HTTP REST и MCP требуют Bearer-токен; UI работает без учётной записи с проверками Host, Origin при наличии и специального заголовка; доступ к stdio даёт запуск локального процесса. Метка X-Actor — атрибуция, а не доказательство личности.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "HTTP REST/MCP без действительного токена отвечают 401, запрос к UI с чужим Origin — 403, локальный UI открывается без регистрации. Проверка не предполагает защиту от другого локального процесса с доступом к машине."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "N05",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "NFR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "NFR 3.5",
+        "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "order": 4
+      },
+      {
+        "id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[B04] Выпуск документов и сохранность данных",
+        "description": "Аналитик собирает BRD и SRS из текущего каталога и может перенести проект на другой экземпляр без повторного ручного ввода.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "на одном наборе данных сформированы BRD и SRS, сохранена копия проекта, из неё на отдельной базе восстановлены исходные идентификаторы."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "B04",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "BR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "BR 4",
+        "parent_id": null,
+        "order": 3
+      },
+      {
+        "id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+        "version": 2,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:19:26.158+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F10] Сборка и выгрузка BRD/SRS",
+        "description": "Собирать BRD с BR и бизнес-разделами, SRS с FR/NFR, интерфейсами, матрицей BR→FR и приложением схем. Добавлять глоссарий, титул и критерии, применять фильтры по статусам и веткам. При выборе веток в приложение SRS включать только активные схемы, связанные с выбранными требованиями или их потомками, которые проходят фильтры статусов. Предоставлять предпросмотр и скачивание Markdown/PDF с записью об экспорте.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "BRD для выбранного FR включает его BR, если тот проходит фильтр статусов. «Только Approved» включает ровно этот статус. При выборе ветки приложение SRS включает активную схему, связанную с подходящим требованием ветки, и исключает несвязанные схемы, схемы соседних веток и схемы, связанные только с требованиями, отсеянными фильтром статусов. Общая схема появляется в приложении один раз. Без выбора веток приложение содержит все активные схемы проекта. Сохранённый файл не меняется после правки требований."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F10",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 4.1",
+        "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+        "order": 0
+      },
+      {
+        "id": "632348bc-4c05-4365-8996-5b361d937f5d",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[F11] Импорт и резервная копия",
+        "description": "Использовать CSV для активной иерархии, JSON для снимка проекта и его истории. При восстановлении отдельного проекта сохранять UUID, при импорте в имеющийся проект назначать новые UUID и переносить активные связи. Файлы экспортов сохранять отдельно от JSON.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "восстановление на чистом экземпляре возвращает UUID и историю; два импорта без коллизий создают новые UUID. Некорректный импорт не меняет проект."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "F11",
+          "реализовано"
+        ],
+        "status": "Draft",
+        "priority": "Must",
+        "type": "FR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "FR 4.2",
+        "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+        "order": 1
+      },
+      {
+        "id": "9105af52-1dd2-4beb-9716-5dbe9f938c3f",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "updated_at": "2026-11-15T11:12:50.343+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[N06] Допустимая потеря данных и время восстановления",
+        "description": "Для локального развёртывания предложены RPO ≤ 24 ч и RTO ≤ 60 мин. Резервировать согласованную копию SQLite и хранилища файлов экспортов; кэш рендера допускается пересобрать. Автоматическое расписание и срок хранения нужно согласовать.",
+        "source": "Спецификация ReqBase 0.1 и решения владельца",
+        "acceptance_criteria": [
+          "восстановить копию на чистом стенде за 60 минут, проверить проект, UUID, связи, историю и открытие ранее выпущенного файла; самой свежей доступной копии не более 24 часов."
+        ],
+        "tags": [
+          "reqbase-spec",
+          "N06",
+          "предложено"
+        ],
+        "status": "Draft",
+        "priority": "Should",
+        "type": "NFR",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "code": "NFR 4.3",
+        "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+        "order": 2
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "428af7d1-2d33-4936-aa91-5b53f24326ec",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.079+00:00",
+        "updated_at": "2026-11-15T11:12:51.079+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[D01] Контекст и компоненты",
+        "source": "flowchart LR\n    A[Аналитик] -->|Веб RU/EN| W[Браузер]\n    W -->|UI API| H[FastAPI]\n    C[ИИ-клиент] -->|MCP HTTP| H\n    C -->|MCP stdio| M[MCP-процесс]\n    I[Интеграция] -->|REST| H\n    H --> S[Общий сервис ReqBase]\n    M --> S\n    S --> DB[(SQLite)]\n    S --> K[Kroki и Mermaid]\n    S --> F[(Кэш и файлы экспортов)]",
+        "type": "mermaid",
+        "kind": "component",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "99e341df-36dc-4b70-9df8-26f19607abb3",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.109+00:00",
+        "updated_at": "2026-11-15T11:12:51.109+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[D02] Логическая модель проекта",
+        "source": "erDiagram\n    PROJECT ||--o{ REQUIREMENT : owns\n    REQUIREMENT o|--o{ REQUIREMENT : parent_of\n    PROJECT ||--o{ DIAGRAM : owns\n    REQUIREMENT ||--o{ ATTACHMENT : references\n    DIAGRAM ||--o{ ATTACHMENT : linked_via\n    REQUIREMENT ||--o{ LINK : source\n    REQUIREMENT ||--o{ LINK : target\n    REQUIREMENT ||--o{ COMMENT : discussed_in\n    REQUIREMENT ||--o{ AUDIT_EVENT : versioned_by\n    PROJECT ||--o{ DOC_SECTION : owns\n    PROJECT ||--o{ GLOSSARY_TERM : defines\n    PROJECT ||--o{ SAVED_VIEW : owns\n    PROJECT ||--o{ EXPORT : produces",
+        "type": "mermaid",
+        "kind": "ER",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "18a13cbe-cc41-4956-88f4-491c8e56f790",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.140+00:00",
+        "updated_at": "2026-11-15T11:12:51.140+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[D03] Запись через MCP и конфликт версий",
+        "source": "sequenceDiagram\n    actor A as Аналитик\n    participant C as ИИ-клиент\n    participant M as MCP\n    participant S as Сервис\n    participant D as SQLite\n    C->>M: Прочитать требование по UUID\n    M->>S: get_requirement\n    S-->>C: Требование и версия v\n    opt Предварительная проверка\n        C->>M: update с expected_version=v и dry_run=true\n        M->>S: Рассчитать результат без фиксации\n        S-->>C: Результат проверки\n    end\n    C->>M: update с expected_version=v\n    M->>S: Проверить версию и изменение\n    alt Версия совпадает\n        S->>D: Правка, пересчёт кодов и аудит в транзакции\n        S-->>C: Новая версия и результаты\n        A->>S: Посмотреть историю в UI\n        opt Аналитик отменяет правку\n            A->>S: Откат по событию и текущей версии\n            S->>D: Восстановить состояние и записать событие\n        end\n    else Версия устарела\n        S-->>C: Ошибка конфликта, перечитать запись\n    end",
+        "type": "mermaid",
+        "kind": "sequence",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "4e81f5df-9751-4a6b-a797-1a094ea4253a",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.172+00:00",
+        "updated_at": "2026-11-15T11:12:51.172+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "title": "[D04] Рабочий процесс согласования",
+        "source": "stateDiagram-v2\n    [*] --> Draft\n    Draft --> Review: Передать на проверку\n    state \"In Review\" as Review\n    Review --> Draft: Вернуть на доработку\n    Review --> Approved: Аналитик согласовал в UI или поручил MCP\n    Review --> Rejected: Аналитик отклонил\n    Approved --> Implemented: Реализация подтверждена\n    Rejected --> Draft: Вернуть в работу",
+        "type": "mermaid",
+        "kind": "state",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      }
+    ],
+    "requirement-diagrams": [
+      {
+        "id": "aa35cf9b-2fda-4d82-82c1-2d6176859045",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.079+00:00",
+        "updated_at": "2026-11-15T11:12:51.079+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "2de07e0b-ff64-4ef5-8d05-b4e167bdf580",
+        "diagram_id": "428af7d1-2d33-4936-aa91-5b53f24326ec"
+      },
+      {
+        "id": "91e07d67-4cd0-4550-9c12-43cff99e7f7d",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.079+00:00",
+        "updated_at": "2026-11-15T11:12:51.079+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "042b127a-831a-4186-b062-964414b86c4a",
+        "diagram_id": "428af7d1-2d33-4936-aa91-5b53f24326ec"
+      },
+      {
+        "id": "b7c400f5-e1f8-4f79-a73e-abfb39356a8c",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.079+00:00",
+        "updated_at": "2026-11-15T11:12:51.079+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "f371832f-8228-418b-be22-031818f74407",
+        "diagram_id": "428af7d1-2d33-4936-aa91-5b53f24326ec"
+      },
+      {
+        "id": "72af3efc-da73-498f-afeb-1de4645d278f",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.109+00:00",
+        "updated_at": "2026-11-15T11:12:51.109+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+        "diagram_id": "99e341df-36dc-4b70-9df8-26f19607abb3"
+      },
+      {
+        "id": "40a215df-a276-4722-80b2-6314d697355a",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.109+00:00",
+        "updated_at": "2026-11-15T11:12:51.109+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "diagram_id": "99e341df-36dc-4b70-9df8-26f19607abb3"
+      },
+      {
+        "id": "c781ae70-5962-4e28-a7fc-3e598a52867d",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.109+00:00",
+        "updated_at": "2026-11-15T11:12:51.109+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+        "diagram_id": "99e341df-36dc-4b70-9df8-26f19607abb3"
+      },
+      {
+        "id": "858a4a8c-916b-4e43-9fd6-2be3a8d0ae03",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.109+00:00",
+        "updated_at": "2026-11-15T11:12:51.109+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "985f45d5-cf50-4b46-aebb-3775ee30d8c5",
+        "diagram_id": "99e341df-36dc-4b70-9df8-26f19607abb3"
+      },
+      {
+        "id": "57209fd6-e27e-4aaf-a1f0-4e5b8c5a1518",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.109+00:00",
+        "updated_at": "2026-11-15T11:12:51.109+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+        "diagram_id": "99e341df-36dc-4b70-9df8-26f19607abb3"
+      },
+      {
+        "id": "e112af85-5679-4321-b85e-36106a7a1ada",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.109+00:00",
+        "updated_at": "2026-11-15T11:12:51.109+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "f35d1752-77eb-40da-aaed-12231f6db0b9",
+        "diagram_id": "99e341df-36dc-4b70-9df8-26f19607abb3"
+      },
+      {
+        "id": "51500968-a7fd-4719-86af-2d478e4410f2",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.140+00:00",
+        "updated_at": "2026-11-15T11:12:51.140+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "diagram_id": "18a13cbe-cc41-4956-88f4-491c8e56f790"
+      },
+      {
+        "id": "02799b23-d1fd-4442-93e3-0ff800765bb2",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.140+00:00",
+        "updated_at": "2026-11-15T11:12:51.140+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "54c18f40-4887-4603-8c94-2b2510523068",
+        "diagram_id": "18a13cbe-cc41-4956-88f4-491c8e56f790"
+      },
+      {
+        "id": "35968e50-2843-43b2-bba4-0e449da0b568",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.140+00:00",
+        "updated_at": "2026-11-15T11:12:51.140+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+        "diagram_id": "18a13cbe-cc41-4956-88f4-491c8e56f790"
+      },
+      {
+        "id": "af8ce6f1-8dca-44e5-bf53-01410929abb1",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.140+00:00",
+        "updated_at": "2026-11-15T11:12:51.140+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "2de07e0b-ff64-4ef5-8d05-b4e167bdf580",
+        "diagram_id": "18a13cbe-cc41-4956-88f4-491c8e56f790"
+      },
+      {
+        "id": "47de489b-4685-4771-a605-e8c83dc89624",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.172+00:00",
+        "updated_at": "2026-11-15T11:12:51.172+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "diagram_id": "4e81f5df-9751-4a6b-a797-1a094ea4253a"
+      },
+      {
+        "id": "be139b2a-9c25-4dec-a9ca-1ce89ddbd4c1",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.172+00:00",
+        "updated_at": "2026-11-15T11:12:51.172+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+        "diagram_id": "4e81f5df-9751-4a6b-a797-1a094ea4253a"
+      },
+      {
+        "id": "69ed0a09-bd46-42b0-ba6c-6d4de9ffa21b",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.172+00:00",
+        "updated_at": "2026-11-15T11:12:51.172+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "23aae6fe-2762-439d-ba9f-f6a5d725a07b",
+        "diagram_id": "4e81f5df-9751-4a6b-a797-1a094ea4253a"
+      }
+    ],
+    "comments": [],
+    "links": [
+      {
+        "id": "4e9d3c65-0df0-4130-ade1-3cfa82a73483",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.994+00:00",
+        "updated_at": "2026-11-15T11:12:50.994+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "source_id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+        "target_id": "2de07e0b-ff64-4ef5-8d05-b4e167bdf580",
+        "type": "depends_on",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "dceeedb0-10c6-4e64-b7d0-93d1b12e3d09",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.024+00:00",
+        "updated_at": "2026-11-15T11:12:51.024+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "source_id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+        "target_id": "985f45d5-cf50-4b46-aebb-3775ee30d8c5",
+        "type": "depends_on",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "2bac67eb-c0e2-42ca-8065-f70e5797ab9f",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:51.048+00:00",
+        "updated_at": "2026-11-15T11:12:51.048+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "source_id": "a4cee6b1-ccf8-427c-9995-333a9fb2fb96",
+        "target_id": "f35d1752-77eb-40da-aaed-12231f6db0b9",
+        "type": "depends_on",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      }
+    ],
+    "document-sections": [
+      {
+        "id": "96a71751-3ea8-416c-8021-4722e7e0a21e",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.622+00:00",
+        "updated_at": "2026-11-15T11:12:50.622+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Единый реестр требований, схем и документов по каждому проекту. Аналитик и ИИ работают с одной моделью.",
+        "key": "purpose",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "88d70390-b0c0-4433-a466-0d748487bf41",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.648+00:00",
+        "updated_at": "2026-11-15T11:12:50.648+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Веб RU/EN, REST и MCP, проекты, каталог BR/FR/NFR, схемы, трассировка, история, BRD/SRS и перенос данных.",
+        "key": "scope",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "5177425b-5e86-40b1-9b07-cbbf1197727e",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.676+00:00",
+        "updated_at": "2026-11-15T11:12:50.676+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Аналитик — ведёт и согласует требования. ИИ-ассистент — читает и правит напрямую через MCP. Читатель получает экспорт.",
+        "key": "stakeholders",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "41230e4d-cd6c-4200-8505-d3f61c2f2463",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.705+00:00",
+        "updated_at": "2026-11-15T11:12:50.705+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Уменьшить расхождения между каталогом, схемами и документами; обеспечить проверяемость изменений ИИ.",
+        "key": "business_goals",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "0ead65c9-7156-42ce-b7ff-bf73378cfa86",
+        "version": 2,
+        "created_at": "2026-11-15T11:12:50.735+00:00",
+        "updated_at": "2026-11-15T11:14:59.906+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Один аналитик и его ИИ-ассистент. Approved ставит аналитик в UI или ассистент через MCP по явной команде аналитика. Запись MCP прямая; аудит и откат предусмотрены для требований.",
+        "key": "assumptions",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "ee55d7ae-86ce-4246-9b7e-fe0fa8dfb85f",
+        "version": 2,
+        "created_at": "2026-11-15T11:12:50.769+00:00",
+        "updated_at": "2026-11-15T11:14:59.942+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Первый релиз локальный. Многопользовательские роли, утверждённый baseline и откат объектов кроме требований вне объёма. Численные SLO предложены к обсуждению.",
+        "key": "constraints",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "b0294ca1-3791-40c6-afd1-fa120329b07c",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.798+00:00",
+        "updated_at": "2026-11-15T11:12:50.798+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Черновик 0.1 описывает текущие функции и предлагаемые критерии для ReqBase.",
+        "key": "introduction",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "105fd588-ab17-4680-9607-af9ceb411cf1",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.826+00:00",
+        "updated_at": "2026-11-15T11:12:50.826+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "FastAPI и MCP используют один сервис и SQLite. Kroki отвечает за серверный рендер. Связи и клиенты используют UUID.",
+        "key": "overview",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "d81e7662-bb09-408e-8f69-119492951f21",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.856+00:00",
+        "updated_at": "2026-11-15T11:12:50.856+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "body": "Веб: /; REST: /docs; MCP: /mcp с Bearer либо stdio. Для изменения требования передаётся expected_version.",
+        "key": "interfaces",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      }
+    ],
+    "glossary": [
+      {
+        "id": "d4a4387f-f154-4c7f-8a1f-51beec6bd04d",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.878+00:00",
+        "updated_at": "2026-11-15T11:12:50.878+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "term": "BRD",
+        "definition": "Документ бизнес-требований",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "b648259e-8435-47f4-a252-74c685d27b81",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.907+00:00",
+        "updated_at": "2026-11-15T11:12:50.907+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "term": "SRS",
+        "definition": "Спецификация требований к системе",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "c9e57d71-eed5-4a76-85bf-ceabc7fa597c",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.941+00:00",
+        "updated_at": "2026-11-15T11:12:50.941+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "term": "UUID",
+        "definition": "Постоянный идентификатор записи",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      },
+      {
+        "id": "ead294c4-9b57-4fad-94d7-167abe541a6e",
+        "version": 1,
+        "created_at": "2026-11-15T11:12:50.965+00:00",
+        "updated_at": "2026-11-15T11:12:50.965+00:00",
+        "deleted_at": null,
+        "created_by": "ai:codex-analyst",
+        "updated_by": "ai:codex-analyst",
+        "term": "MCP",
+        "definition": "Протокол подключения ИИ к инструментам ReqBase",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+      }
+    ],
+    "history": [
+      {
+        "id": "9146ea60-1979-430f-8343-36c9e9b116ce",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "042b127a-831a-4186-b062-964414b86c4a",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "B01",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "в сценарии с двумя проектами аналитик находит и меняет нужное требование; данные другого проекта не меняются."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "BR 1"
+          },
+          "order": {
+            "before": null,
+            "after": 0
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[B01] Единый реестр требований"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "042b127a-831a-4186-b062-964414b86c4a"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "BR"
+          },
+          "description": {
+            "before": null,
+            "after": "Аналитик ведёт каждый проект в одном реестре, от бизнес-потребности до проверяемых условий реализации."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "042b127a-831a-4186-b062-964414b86c4a",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[B01] Единый реестр требований",
+          "description": "Аналитик ведёт каждый проект в одном реестре, от бизнес-потребности до проверяемых условий реализации.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "в сценарии с двумя проектами аналитик находит и меняет нужное требование; данные другого проекта не меняются."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "B01",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "BR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "BR 1",
+          "parent_id": null,
+          "order": 0
+        }
+      },
+      {
+        "id": "a8e49d1a-7272-45f5-bde9-6cae7997f1bf",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "114674fb-2857-40a3-ac27-1f057b0289d3",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F01",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "после восстановления доступен тот же проект с тем же UUID и его каталогом; требования и связи другого проекта не меняются."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 1.1"
+          },
+          "order": {
+            "before": null,
+            "after": 0
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F01] Управление проектами"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "114674fb-2857-40a3-ac27-1f057b0289d3"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "042b127a-831a-4186-b062-964414b86c4a"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Создавать и редактировать проект с языком документа и реквизитами титульного листа, переключаться между проектами, удалять и восстанавливать проект."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "114674fb-2857-40a3-ac27-1f057b0289d3",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F01] Управление проектами",
+          "description": "Создавать и редактировать проект с языком документа и реквизитами титульного листа, переключаться между проектами, удалять и восстанавливать проект.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после восстановления доступен тот же проект с тем же UUID и его каталогом; требования и связи другого проекта не меняются."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F01",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 1.1",
+          "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+          "order": 0
+        }
+      },
+      {
+        "id": "4a93a2d9-e195-420b-b8ae-a560aa9bae4e",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "f35d1752-77eb-40da-aaed-12231f6db0b9",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F02",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "после переноса FR под другое BR его UUID и связи сохраняются, отображаемый код меняется; попытка переместить ветку под её потомка отклоняется."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 1.2"
+          },
+          "order": {
+            "before": null,
+            "after": 1
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F02] Карточка требования и иерархия"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "f35d1752-77eb-40da-aaed-12231f6db0b9"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "042b127a-831a-4186-b062-964414b86c4a"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Хранить название, описание, тип, источник, статус, приоритет, критерии приёмки и теги. BR — корень; FR/NFR — потомки BR. Переносить и упорядочивать ветки, сохраняя UUID и пересчитывая позиционные коды."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "f35d1752-77eb-40da-aaed-12231f6db0b9",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F02] Карточка требования и иерархия",
+          "description": "Хранить название, описание, тип, источник, статус, приоритет, критерии приёмки и теги. BR — корень; FR/NFR — потомки BR. Переносить и упорядочивать ветки, сохраняя UUID и пересчитывая позиционные коды.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после переноса FR под другое BR его UUID и связи сохраняются, отображаемый код меняется; попытка переместить ветку под её потомка отклоняется."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F02",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 1.2",
+          "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+          "order": 1
+        }
+      },
+      {
+        "id": "e9df6f0c-379d-41db-8197-0aba1cb28d81",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "40a35548-59cd-43fd-8f2d-38a2bfe8823e",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F03",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "при поиске совпавшее дочернее требование видно вместе с предками; сохранённое представление повторно открывается с выбранным режимом и фильтрами."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 1.3"
+          },
+          "order": {
+            "before": null,
+            "after": 2
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F03] Поиск и рабочие представления"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "40a35548-59cd-43fd-8f2d-38a2bfe8823e"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "042b127a-831a-4186-b062-964414b86c4a"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Открывать реестр деревом, таблицей или канбаном. Искать по коду, названию, описанию, источнику, тегам и критериям; фильтровать записи и сохранять рабочие представления."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "40a35548-59cd-43fd-8f2d-38a2bfe8823e",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F03] Поиск и рабочие представления",
+          "description": "Открывать реестр деревом, таблицей или канбаном. Искать по коду, названию, описанию, источнику, тегам и критериям; фильтровать записи и сохранять рабочие представления.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "при поиске совпавшее дочернее требование видно вместе с предками; сохранённое представление повторно открывается с выбранным режимом и фильтрами."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F03",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 1.3",
+          "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+          "order": 2
+        }
+      },
+      {
+        "id": "73d284f7-3760-41ee-9e1b-cd9244a38db4",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "ba42dbce-b88c-44b1-972f-37b6181a41d0",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "N01",
+              "предложено"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "p95 открытия дерева и серверного поиска ≤ 2 с, p95 одиночной правки ≤ 1 с на локальном стенде после прогрева; замер по 30 операциям каждого вида, без рендера и экспорта."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "NFR 1.4"
+          },
+          "order": {
+            "before": null,
+            "after": 3
+          },
+          "priority": {
+            "before": null,
+            "after": "Should"
+          },
+          "title": {
+            "before": null,
+            "after": "[N01] Скорость работы с каталогом"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "ba42dbce-b88c-44b1-972f-37b6181a41d0"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "042b127a-831a-4186-b062-964414b86c4a"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "NFR"
+          },
+          "description": {
+            "before": null,
+            "after": "Стартовый профиль нагрузки: 5 проектов по 1 000 активных требований, дерево глубиной до 6, один аналитик и один MCP-клиент. Зафиксировать конфигурацию стенда перед измерением."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "ba42dbce-b88c-44b1-972f-37b6181a41d0",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[N01] Скорость работы с каталогом",
+          "description": "Стартовый профиль нагрузки: 5 проектов по 1 000 активных требований, дерево глубиной до 6, один аналитик и один MCP-клиент. Зафиксировать конфигурацию стенда перед измерением.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "p95 открытия дерева и серверного поиска ≤ 2 с, p95 одиночной правки ≤ 1 с на локальном стенде после прогрева; замер по 30 операциям каждого вида, без рендера и экспорта."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "N01",
+            "предложено"
+          ],
+          "status": "Draft",
+          "priority": "Should",
+          "type": "NFR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "NFR 1.4",
+          "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+          "order": 3
+        }
+      },
+      {
+        "id": "46129eb6-d847-4446-9aa5-02409004c682",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "cadb9fd7-5806-4973-93f6-6aa581ab42c2",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "N02",
+              "частично"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "на RU и EN открыть каталог, найти строку, открыть карточку, создать и отредактировать требование без мыши; данные с кириллицей сохраняются после перезагрузки."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "NFR 1.5"
+          },
+          "order": {
+            "before": null,
+            "after": 4
+          },
+          "priority": {
+            "before": null,
+            "after": "Should"
+          },
+          "title": {
+            "before": null,
+            "after": "[N02] Язык и работа с клавиатуры"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "cadb9fd7-5806-4973-93f6-6aa581ab42c2"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "042b127a-831a-4186-b062-964414b86c4a"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "NFR"
+          },
+          "description": {
+            "before": null,
+            "after": "Поддерживать RU/EN и кириллицу. Выполнение базового сценария через клавиатуру должно быть доступно с видимым фокусом."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "cadb9fd7-5806-4973-93f6-6aa581ab42c2",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[N02] Язык и работа с клавиатуры",
+          "description": "Поддерживать RU/EN и кириллицу. Выполнение базового сценария через клавиатуру должно быть доступно с видимым фокусом.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "на RU и EN открыть каталог, найти строку, открыть карточку, создать и отредактировать требование без мыши; данные с кириллицей сохраняются после перезагрузки."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "N02",
+            "частично"
+          ],
+          "status": "Draft",
+          "priority": "Should",
+          "type": "NFR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "NFR 1.5",
+          "parent_id": "042b127a-831a-4186-b062-964414b86c4a",
+          "order": 4
+        }
+      },
+      {
+        "id": "85f9f137-6ace-4e22-9acd-40fd0054bc35",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "B02",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "по выбранной цели видны FR/NFR и пробелы; аналитик может перевести требование в Approved и увидеть его в отборе согласованных."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "BR 2"
+          },
+          "order": {
+            "before": null,
+            "after": 1
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[B02] Проверяемое согласование и покрытие"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "4e650abe-dd08-4c99-be16-babc1b64d8c8"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "BR"
+          },
+          "description": {
+            "before": null,
+            "after": "Аналитик видит, зачем нужно каждое требование, каких деталей не хватает и что готово к работе. Согласование выполняется вручную сменой статуса на Approved."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[B02] Проверяемое согласование и покрытие",
+          "description": "Аналитик видит, зачем нужно каждое требование, каких деталей не хватает и что готово к работе. Согласование выполняется вручную сменой статуса на Approved.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "по выбранной цели видны FR/NFR и пробелы; аналитик может перевести требование в Approved и увидеть его в отборе согласованных."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "B02",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "BR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "BR 2",
+          "parent_id": null,
+          "order": 1
+        }
+      },
+      {
+        "id": "28347abf-9b45-4857-b889-d6fcdc4d6161",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "23aae6fe-2762-439d-ba9f-f6a5d725a07b",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F04",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "новое требование без явного статуса создаётся в Draft, аналитик добавляет комментарий и меняет статус на Approved; изменение статуса отражается в истории требования."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 2.1"
+          },
+          "order": {
+            "before": null,
+            "after": 0
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F04] Статусы, приоритеты и обсуждение"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "23aae6fe-2762-439d-ba9f-f6a5d725a07b"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "4e650abe-dd08-4c99-be16-babc1b64d8c8"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Поддерживать Draft, In Review, Approved, Implemented, Rejected и приоритеты Must, Should, Could, Won't. Поддерживать комментарии к требованию. Аналитик ставит Approved в UI либо явно поручает это ассистенту. Это правило работы ассистента: сервер сейчас не проверяет наличие пользовательской команды. Обязательные переходы не заданы."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "23aae6fe-2762-439d-ba9f-f6a5d725a07b",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F04] Статусы, приоритеты и обсуждение",
+          "description": "Поддерживать Draft, In Review, Approved, Implemented, Rejected и приоритеты Must, Should, Could, Won't. Поддерживать комментарии к требованию. Аналитик ставит Approved в UI либо явно поручает это ассистенту. Это правило работы ассистента: сервер сейчас не проверяет наличие пользовательской команды. Обязательные переходы не заданы.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "новое требование без явного статуса создаётся в Draft, аналитик добавляет комментарий и меняет статус на Approved; изменение статуса отражается в истории требования."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F04",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 2.1",
+          "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+          "order": 0
+        }
+      },
+      {
+        "id": "d18e62ab-675c-491b-ad91-a646efd47e1b",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "a4cee6b1-ccf8-427c-9995-333a9fb2fb96",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F05",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "после добавления FR к пустому BR исчезает признак «BR без FR»; Must/Draft с пустым списком критериев попадает в обе соответствующие проверки."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 2.2"
+          },
+          "order": {
+            "before": null,
+            "after": 1
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F05] Матрица и диагностика пробелов"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "a4cee6b1-ccf8-427c-9995-333a9fb2fb96"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "4e650abe-dd08-4c99-be16-babc1b64d8c8"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Показывать BR и его FR/NFR независимо от глубины вложения. Выявлять BR без FR, FR без BR, записи без критериев, BR без схем и Must в Draft. Трассировка по дереву и явные связи — разные механизмы."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "a4cee6b1-ccf8-427c-9995-333a9fb2fb96",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F05] Матрица и диагностика пробелов",
+          "description": "Показывать BR и его FR/NFR независимо от глубины вложения. Выявлять BR без FR, FR без BR, записи без критериев, BR без схем и Must в Draft. Трассировка по дереву и явные связи — разные механизмы.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после добавления FR к пустому BR исчезает признак «BR без FR»; Must/Draft с пустым списком критериев попадает в обе соответствующие проверки."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F05",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 2.2",
+          "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+          "order": 1
+        }
+      },
+      {
+        "id": "35458325-04e5-42f4-8267-9a60b07d2a26",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "985f45d5-cf50-4b46-aebb-3775ee30d8c5",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F06",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "схема видна в двух связанных карточках; ссылка за пределы проекта или на то же требование отклоняется; при доступном рендере схема скачивается как SVG/PNG."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 2.3"
+          },
+          "order": {
+            "before": null,
+            "after": 2
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F06] Схемы и связи"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "985f45d5-cf50-4b46-aebb-3775ee30d8c5"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "4e650abe-dd08-4c99-be16-babc1b64d8c8"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Хранить редактируемые Mermaid/PlantUML, указывать вид схемы, связывать её с одним или несколькими требованиями; задавать depends_on, relates_to и conflicts_with. Предусмотреть просмотр и выгрузку рисунка."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "985f45d5-cf50-4b46-aebb-3775ee30d8c5",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F06] Схемы и связи",
+          "description": "Хранить редактируемые Mermaid/PlantUML, указывать вид схемы, связывать её с одним или несколькими требованиями; задавать depends_on, relates_to и conflicts_with. Предусмотреть просмотр и выгрузку рисунка.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "схема видна в двух связанных карточках; ссылка за пределы проекта или на то же требование отклоняется; при доступном рендере схема скачивается как SVG/PNG."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F06",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 2.3",
+          "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+          "order": 2
+        }
+      },
+      {
+        "id": "b453e747-bd7e-4295-a9d8-8ab9b036fcef",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "e3a2e27c-de3b-4d0a-82da-5ee2eca5a101",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "N03",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "отключить Kroki, сохранить и прочитать требование и схему; Mermaid открывается в локальном просмотре, а серверная операция для новой некэшированной схемы сообщает о проблеме рендера."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "NFR 2.4"
+          },
+          "order": {
+            "before": null,
+            "after": 3
+          },
+          "priority": {
+            "before": null,
+            "after": "Should"
+          },
+          "title": {
+            "before": null,
+            "after": "[N03] Работа при недоступности рендера"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "e3a2e27c-de3b-4d0a-82da-5ee2eca5a101"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "4e650abe-dd08-4c99-be16-babc1b64d8c8"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "NFR"
+          },
+          "description": {
+            "before": null,
+            "after": "Сохранение и чтение требований и исходников схем не должны зависеть от Kroki. Ошибка синтаксиса отличима от недоступности рендера; для Mermaid доступен локальный просмотр."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "e3a2e27c-de3b-4d0a-82da-5ee2eca5a101",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[N03] Работа при недоступности рендера",
+          "description": "Сохранение и чтение требований и исходников схем не должны зависеть от Kroki. Ошибка синтаксиса отличима от недоступности рендера; для Mermaid доступен локальный просмотр.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "отключить Kroki, сохранить и прочитать требование и схему; Mermaid открывается в локальном просмотре, а серверная операция для новой некэшированной схемы сообщает о проблеме рендера."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "N03",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Should",
+          "type": "NFR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "NFR 2.4",
+          "parent_id": "4e650abe-dd08-4c99-be16-babc1b64d8c8",
+          "order": 3
+        }
+      },
+      {
+        "id": "aa00e8e7-fdc1-4ae4-8f5f-cd9851622a77",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.343+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "B03",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "MCP меняет запись; аналитик находит событие в UI, видит автора, канал и правку, затем возвращает прежнее состояние."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "BR 3"
+          },
+          "order": {
+            "before": null,
+            "after": 2
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[B03] Совместная работа аналитика и ИИ"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "3376aafb-4145-4974-adb9-c3fe7ed88edc"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "BR"
+          },
+          "description": {
+            "before": null,
+            "after": "ИИ напрямую обновляет тот же реестр через MCP. Аналитик видит результат, понимает происхождение изменения и может восстановить прежнее состояние в согласованных границах аудита."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[B03] Совместная работа аналитика и ИИ",
+          "description": "ИИ напрямую обновляет тот же реестр через MCP. Аналитик видит результат, понимает происхождение изменения и может восстановить прежнее состояние в согласованных границах аудита.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "MCP меняет запись; аналитик находит событие в UI, видит автора, канал и правку, затем возвращает прежнее состояние."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "B03",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "BR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "BR 3",
+          "parent_id": null,
+          "order": 2
+        }
+      },
+      {
+        "id": "b72957cc-5757-4738-9370-28392b391339",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "2de07e0b-ff64-4ef5-8d05-b4e167bdf580",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F07",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "MCP показывает дерево, пакетный dry_run не создаёт записей, обычный вызов создаёт записи, а UI и REST читают эти же UUID."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 3.1"
+          },
+          "order": {
+            "before": null,
+            "after": 0
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F07] Чтение и запись через MCP и REST"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "2de07e0b-ff64-4ef5-8d05-b4e167bdf580"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "3376aafb-4145-4974-adb9-c3fe7ed88edc"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Предоставлять HTTP MCP и stdio, а также REST API с OpenAPI. Использовать общую модель данных. Поддерживать поиск/чтение и пакетное создание/правку требований; для мутаций предоставить предварительный прогон, где он предусмотрен контрактом."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "2de07e0b-ff64-4ef5-8d05-b4e167bdf580",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F07] Чтение и запись через MCP и REST",
+          "description": "Предоставлять HTTP MCP и stdio, а также REST API с OpenAPI. Использовать общую модель данных. Поддерживать поиск/чтение и пакетное создание/правку требований; для мутаций предоставить предварительный прогон, где он предусмотрен контрактом.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "MCP показывает дерево, пакетный dry_run не создаёт записей, обычный вызов создаёт записи, а UI и REST читают эти же UUID."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F07",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 3.1",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 0
+        }
+      },
+      {
+        "id": "96a9905e-ac9d-4dd4-986c-ffa585db6566",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F08",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "после MCP-правки требование возвращено к состоянию до выбранного события; аудит содержит обе операции."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 3.2"
+          },
+          "order": {
+            "before": null,
+            "after": 1
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F08] Аудит и откат правок"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "0e3bc90a-077d-43b7-bef2-b18037832969"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "3376aafb-4145-4974-adb9-c3fe7ed88edc"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Для правки требования показывать автора, канал, время и состояния до/после. Откатывать отдельное требование по событию его истории; откат оставляет новое событие. Пакет можно править атомарно, обратная операция выбирается отдельно по требованию."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F08] Аудит и откат правок",
+          "description": "Для правки требования показывать автора, канал, время и состояния до/после. Откатывать отдельное требование по событию его истории; откат оставляет новое событие. Пакет можно править атомарно, обратная операция выбирается отдельно по требованию.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после MCP-правки требование возвращено к состоянию до выбранного события; аудит содержит обе операции."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F08",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 3.2",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 1
+        }
+      },
+      {
+        "id": "016210e1-9d33-46fd-a32f-eaeb77b33a83",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "52000ed1-2ed0-4191-aa12-ca1f180cd7c5",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F09",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "удалённая ветка исчезает из дерева; после восстановления вернулись исходные UUID и ассоциации. Независимо удалённая ранее запись не восстанавливается вместе с веткой."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 3.3"
+          },
+          "order": {
+            "before": null,
+            "after": 2
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F09] Корзина и восстановление ветки"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "52000ed1-2ed0-4191-aa12-ca1f180cd7c5"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "3376aafb-4145-4974-adb9-c3fe7ed88edc"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Удалять проект или ветку обратимо. Для ветки восстанавливать записи, удалённые одной операцией, и их идентичность; учитывать состояние родителя."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "52000ed1-2ed0-4191-aa12-ca1f180cd7c5",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F09] Корзина и восстановление ветки",
+          "description": "Удалять проект или ветку обратимо. Для ветки восстанавливать записи, удалённые одной операцией, и их идентичность; учитывать состояние родителя.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "удалённая ветка исчезает из дерева; после восстановления вернулись исходные UUID и ассоциации. Независимо удалённая ранее запись не восстанавливается вместе с веткой."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F09",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 3.3",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 2
+        }
+      },
+      {
+        "id": "833e1c0e-4623-4f04-afd0-83df3fc126b8",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "54c18f40-4887-4603-8c94-2b2510523068",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "N04",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "из двух параллельных правок с одной версией принимается одна; вторая получает конфликт. Пакет с некорректным элементом не оставляет новых записей или событий."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "NFR 3.4"
+          },
+          "order": {
+            "before": null,
+            "after": 3
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[N04] Защита от потери правок"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "54c18f40-4887-4603-8c94-2b2510523068"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "3376aafb-4145-4974-adb9-c3fe7ed88edc"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "NFR"
+          },
+          "description": {
+            "before": null,
+            "after": "Проверять версию изменяемой записи и выполнять изменение требований, пересчёт кодов и аудит атомарно. Пакет не должен сохраняться частично. В REST при конфликте возвращать 409 и текущую запись."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "54c18f40-4887-4603-8c94-2b2510523068",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[N04] Защита от потери правок",
+          "description": "Проверять версию изменяемой записи и выполнять изменение требований, пересчёт кодов и аудит атомарно. Пакет не должен сохраняться частично. В REST при конфликте возвращать 409 и текущую запись.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "из двух параллельных правок с одной версией принимается одна; вторая получает конфликт. Пакет с некорректным элементом не оставляет новых записей или событий."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "N04",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "NFR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "NFR 3.4",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 3
+        }
+      },
+      {
+        "id": "3977b8ea-87c1-4538-bdb7-5116635f29ff",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "f371832f-8228-418b-be22-031818f74407",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "N05",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "HTTP REST/MCP без действительного токена отвечают 401, запрос к UI с чужим Origin — 403, локальный UI открывается без регистрации. Проверка не предполагает защиту от другого локального процесса с доступом к машине."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "NFR 3.5"
+          },
+          "order": {
+            "before": null,
+            "after": 4
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[N05] Локальный доступ и защита интерфейсов"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "f371832f-8228-418b-be22-031818f74407"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "3376aafb-4145-4974-adb9-c3fe7ed88edc"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "NFR"
+          },
+          "description": {
+            "before": null,
+            "after": "По умолчанию публиковать приложение на loopback. HTTP REST и MCP требуют Bearer-токен; UI работает без учётной записи с проверками Host, Origin при наличии и специального заголовка; доступ к stdio даёт запуск локального процесса. Метка X-Actor — атрибуция, а не доказательство личности."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "f371832f-8228-418b-be22-031818f74407",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[N05] Локальный доступ и защита интерфейсов",
+          "description": "По умолчанию публиковать приложение на loopback. HTTP REST и MCP требуют Bearer-токен; UI работает без учётной записи с проверками Host, Origin при наличии и специального заголовка; доступ к stdio даёт запуск локального процесса. Метка X-Actor — атрибуция, а не доказательство личности.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "HTTP REST/MCP без действительного токена отвечают 401, запрос к UI с чужим Origin — 403, локальный UI открывается без регистрации. Проверка не предполагает защиту от другого локального процесса с доступом к машине."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "N05",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "NFR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "NFR 3.5",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 4
+        }
+      },
+      {
+        "id": "410a296d-eeaa-4949-bef8-ab814c5fb34a",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "B04",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "на одном наборе данных сформированы BRD и SRS, сохранена копия проекта, из неё на отдельной базе восстановлены исходные идентификаторы."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "BR 4"
+          },
+          "order": {
+            "before": null,
+            "after": 3
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[B04] Выпуск документов и сохранность данных"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "BR"
+          },
+          "description": {
+            "before": null,
+            "after": "Аналитик собирает BRD и SRS из текущего каталога и может перенести проект на другой экземпляр без повторного ручного ввода."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[B04] Выпуск документов и сохранность данных",
+          "description": "Аналитик собирает BRD и SRS из текущего каталога и может перенести проект на другой экземпляр без повторного ручного ввода.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "на одном наборе данных сформированы BRD и SRS, сохранена копия проекта, из неё на отдельной базе восстановлены исходные идентификаторы."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "B04",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "BR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "BR 4",
+          "parent_id": null,
+          "order": 3
+        }
+      },
+      {
+        "id": "081ce70a-f63f-41bf-8c0a-a2a77b3f38ba",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F10",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "BRD для выбранного FR включает его BR, если тот удовлетворяет фильтру статусов; «Только Approved» включает ровно этот статус. SRS содержит FR/NFR и приложение всех активных схем по текущему правилу; сохранённый файл не меняется после правки требований."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 4.1"
+          },
+          "order": {
+            "before": null,
+            "after": 0
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F10] Сборка и выгрузка BRD/SRS"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Собирать BRD с BR и бизнес-разделами, SRS с FR/NFR, интерфейсами, матрицей BR→FR и приложением схем. Добавлять глоссарий, титул и критерии, применять фильтры по статусам и веткам. Предоставлять предпросмотр и скачивание Markdown/PDF с записью об экспорте."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F10] Сборка и выгрузка BRD/SRS",
+          "description": "Собирать BRD с BR и бизнес-разделами, SRS с FR/NFR, интерфейсами, матрицей BR→FR и приложением схем. Добавлять глоссарий, титул и критерии, применять фильтры по статусам и веткам. Предоставлять предпросмотр и скачивание Markdown/PDF с записью об экспорте.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "BRD для выбранного FR включает его BR, если тот удовлетворяет фильтру статусов; «Только Approved» включает ровно этот статус. SRS содержит FR/NFR и приложение всех активных схем по текущему правилу; сохранённый файл не меняется после правки требований."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F10",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 4.1",
+          "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+          "order": 0
+        }
+      },
+      {
+        "id": "504c48db-2d8a-40c1-877d-4cb6fa2d214c",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "632348bc-4c05-4365-8996-5b361d937f5d",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "F11",
+              "реализовано"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "восстановление на чистом экземпляре возвращает UUID и историю; два импорта без коллизий создают новые UUID. Некорректный импорт не меняет проект."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "FR 4.2"
+          },
+          "order": {
+            "before": null,
+            "after": 1
+          },
+          "priority": {
+            "before": null,
+            "after": "Must"
+          },
+          "title": {
+            "before": null,
+            "after": "[F11] Импорт и резервная копия"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "632348bc-4c05-4365-8996-5b361d937f5d"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "FR"
+          },
+          "description": {
+            "before": null,
+            "after": "Использовать CSV для активной иерархии, JSON для снимка проекта и его истории. При восстановлении отдельного проекта сохранять UUID, при импорте в имеющийся проект назначать новые UUID и переносить активные связи. Файлы экспортов сохранять отдельно от JSON."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "632348bc-4c05-4365-8996-5b361d937f5d",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F11] Импорт и резервная копия",
+          "description": "Использовать CSV для активной иерархии, JSON для снимка проекта и его истории. При восстановлении отдельного проекта сохранять UUID, при импорте в имеющийся проект назначать новые UUID и переносить активные связи. Файлы экспортов сохранять отдельно от JSON.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "восстановление на чистом экземпляре возвращает UUID и историю; два импорта без коллизий создают новые UUID. Некорректный импорт не меняет проект."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F11",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 4.2",
+          "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+          "order": 1
+        }
+      },
+      {
+        "id": "d5573c49-86a2-4765-8a6c-46d24563176e",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "9105af52-1dd2-4beb-9716-5dbe9f938c3f",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "bulk_create",
+        "created_at": "2026-11-15T11:12:50.344+00:00",
+        "diff": {
+          "source": {
+            "before": null,
+            "after": "Спецификация ReqBase 0.1 и решения владельца"
+          },
+          "tags": {
+            "before": null,
+            "after": [
+              "reqbase-spec",
+              "N06",
+              "предложено"
+            ]
+          },
+          "acceptance_criteria": {
+            "before": null,
+            "after": [
+              "восстановить копию на чистом стенде за 60 минут, проверить проект, UUID, связи, историю и открытие ранее выпущенного файла; самой свежей доступной копии не более 24 часов."
+            ]
+          },
+          "created_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          },
+          "created_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "version": {
+            "before": null,
+            "after": 1
+          },
+          "code": {
+            "before": null,
+            "after": "NFR 4.3"
+          },
+          "order": {
+            "before": null,
+            "after": 2
+          },
+          "priority": {
+            "before": null,
+            "after": "Should"
+          },
+          "title": {
+            "before": null,
+            "after": "[N06] Допустимая потеря данных и время восстановления"
+          },
+          "project_id": {
+            "before": null,
+            "after": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c"
+          },
+          "id": {
+            "before": null,
+            "after": "9105af52-1dd2-4beb-9716-5dbe9f938c3f"
+          },
+          "status": {
+            "before": null,
+            "after": "Draft"
+          },
+          "parent_id": {
+            "before": null,
+            "after": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175"
+          },
+          "updated_by": {
+            "before": null,
+            "after": "ai:codex-analyst"
+          },
+          "type": {
+            "before": null,
+            "after": "NFR"
+          },
+          "description": {
+            "before": null,
+            "after": "Для локального развёртывания предложены RPO ≤ 24 ч и RTO ≤ 60 мин. Резервировать согласованную копию SQLite и хранилища файлов экспортов; кэш рендера допускается пересобрать. Автоматическое расписание и срок хранения нужно согласовать."
+          },
+          "updated_at": {
+            "before": null,
+            "after": "2026-11-15T11:12:50.343+00:00"
+          }
+        },
+        "before": null,
+        "after": {
+          "id": "9105af52-1dd2-4beb-9716-5dbe9f938c3f",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[N06] Допустимая потеря данных и время восстановления",
+          "description": "Для локального развёртывания предложены RPO ≤ 24 ч и RTO ≤ 60 мин. Резервировать согласованную копию SQLite и хранилища файлов экспортов; кэш рендера допускается пересобрать. Автоматическое расписание и срок хранения нужно согласовать.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "восстановить копию на чистом стенде за 60 минут, проверить проект, UUID, связи, историю и открытие ранее выпущенного файла; самой свежей доступной копии не более 24 часов."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "N06",
+            "предложено"
+          ],
+          "status": "Draft",
+          "priority": "Should",
+          "type": "NFR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "NFR 4.3",
+          "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+          "order": 2
+        }
+      },
+      {
+        "id": "6a04dcc6-287b-47c5-8abd-da914b97fbe5",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "update",
+        "created_at": "2026-11-15T11:12:50.440+00:00",
+        "diff": {
+          "status": {
+            "before": "Draft",
+            "after": "In Review"
+          }
+        },
+        "before": {
+          "id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F08] Аудит и откат правок",
+          "description": "Для правки требования показывать автора, канал, время и состояния до/после. Откатывать отдельное требование по событию его истории; откат оставляет новое событие. Пакет можно править атомарно, обратная операция выбирается отдельно по требованию.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после MCP-правки требование возвращено к состоянию до выбранного события; аудит содержит обе операции."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F08",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 3.2",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 1
+        },
+        "after": {
+          "id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+          "version": 2,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.440+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F08] Аудит и откат правок",
+          "description": "Для правки требования показывать автора, канал, время и состояния до/после. Откатывать отдельное требование по событию его истории; откат оставляет новое событие. Пакет можно править атомарно, обратная операция выбирается отдельно по требованию.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после MCP-правки требование возвращено к состоянию до выбранного события; аудит содержит обе операции."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F08",
+            "реализовано"
+          ],
+          "status": "In Review",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 3.2",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 1
+        }
+      },
+      {
+        "id": "e91a05ad-1954-444a-9b97-077f99f92df8",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "rollback",
+        "created_at": "2026-11-15T11:12:50.556+00:00",
+        "diff": {
+          "status": {
+            "before": "In Review",
+            "after": "Draft"
+          }
+        },
+        "before": {
+          "id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+          "version": 2,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.440+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F08] Аудит и откат правок",
+          "description": "Для правки требования показывать автора, канал, время и состояния до/после. Откатывать отдельное требование по событию его истории; откат оставляет новое событие. Пакет можно править атомарно, обратная операция выбирается отдельно по требованию.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после MCP-правки требование возвращено к состоянию до выбранного события; аудит содержит обе операции."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F08",
+            "реализовано"
+          ],
+          "status": "In Review",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 3.2",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 1
+        },
+        "after": {
+          "id": "0e3bc90a-077d-43b7-bef2-b18037832969",
+          "version": 3,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.556+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F08] Аудит и откат правок",
+          "description": "Для правки требования показывать автора, канал, время и состояния до/после. Откатывать отдельное требование по событию его истории; откат оставляет новое событие. Пакет можно править атомарно, обратная операция выбирается отдельно по требованию.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "после MCP-правки требование возвращено к состоянию до выбранного события; аудит содержит обе операции."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F08",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 3.2",
+          "parent_id": "3376aafb-4145-4974-adb9-c3fe7ed88edc",
+          "order": 1
+        }
+      },
+      {
+        "id": "0f28c131-50cb-4b14-9aa0-908c82a12c0c",
+        "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+        "requirement_id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+        "actor": "ai:codex-analyst",
+        "channel": "mcp",
+        "action": "update",
+        "created_at": "2026-11-15T11:19:26.158+00:00",
+        "diff": {
+          "acceptance_criteria": {
+            "before": [
+              "BRD для выбранного FR включает его BR, если тот удовлетворяет фильтру статусов; «Только Approved» включает ровно этот статус. SRS содержит FR/NFR и приложение всех активных схем по текущему правилу; сохранённый файл не меняется после правки требований."
+            ],
+            "after": [
+              "BRD для выбранного FR включает его BR, если тот проходит фильтр статусов. «Только Approved» включает ровно этот статус. При выборе ветки приложение SRS включает активную схему, связанную с подходящим требованием ветки, и исключает несвязанные схемы, схемы соседних веток и схемы, связанные только с требованиями, отсеянными фильтром статусов. Общая схема появляется в приложении один раз. Без выбора веток приложение содержит все активные схемы проекта. Сохранённый файл не меняется после правки требований."
+            ]
+          },
+          "description": {
+            "before": "Собирать BRD с BR и бизнес-разделами, SRS с FR/NFR, интерфейсами, матрицей BR→FR и приложением схем. Добавлять глоссарий, титул и критерии, применять фильтры по статусам и веткам. Предоставлять предпросмотр и скачивание Markdown/PDF с записью об экспорте.",
+            "after": "Собирать BRD с BR и бизнес-разделами, SRS с FR/NFR, интерфейсами, матрицей BR→FR и приложением схем. Добавлять глоссарий, титул и критерии, применять фильтры по статусам и веткам. При выборе веток в приложение SRS включать только активные схемы, связанные с выбранными требованиями или их потомками, которые проходят фильтры статусов. Предоставлять предпросмотр и скачивание Markdown/PDF с записью об экспорте."
+          }
+        },
+        "before": {
+          "id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+          "version": 1,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:12:50.343+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F10] Сборка и выгрузка BRD/SRS",
+          "description": "Собирать BRD с BR и бизнес-разделами, SRS с FR/NFR, интерфейсами, матрицей BR→FR и приложением схем. Добавлять глоссарий, титул и критерии, применять фильтры по статусам и веткам. Предоставлять предпросмотр и скачивание Markdown/PDF с записью об экспорте.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "BRD для выбранного FR включает его BR, если тот удовлетворяет фильтру статусов; «Только Approved» включает ровно этот статус. SRS содержит FR/NFR и приложение всех активных схем по текущему правилу; сохранённый файл не меняется после правки требований."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F10",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 4.1",
+          "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+          "order": 0
+        },
+        "after": {
+          "id": "5f7d942f-a5b4-4a92-8533-f5ec161a9c49",
+          "version": 2,
+          "created_at": "2026-11-15T11:12:50.343+00:00",
+          "updated_at": "2026-11-15T11:19:26.158+00:00",
+          "deleted_at": null,
+          "created_by": "ai:codex-analyst",
+          "updated_by": "ai:codex-analyst",
+          "title": "[F10] Сборка и выгрузка BRD/SRS",
+          "description": "Собирать BRD с BR и бизнес-разделами, SRS с FR/NFR, интерфейсами, матрицей BR→FR и приложением схем. Добавлять глоссарий, титул и критерии, применять фильтры по статусам и веткам. При выборе веток в приложение SRS включать только активные схемы, связанные с выбранными требованиями или их потомками, которые проходят фильтры статусов. Предоставлять предпросмотр и скачивание Markdown/PDF с записью об экспорте.",
+          "source": "Спецификация ReqBase 0.1 и решения владельца",
+          "acceptance_criteria": [
+            "BRD для выбранного FR включает его BR, если тот проходит фильтр статусов. «Только Approved» включает ровно этот статус. При выборе ветки приложение SRS включает активную схему, связанную с подходящим требованием ветки, и исключает несвязанные схемы, схемы соседних веток и схемы, связанные только с требованиями, отсеянными фильтром статусов. Общая схема появляется в приложении один раз. Без выбора веток приложение содержит все активные схемы проекта. Сохранённый файл не меняется после правки требований."
+          ],
+          "tags": [
+            "reqbase-spec",
+            "F10",
+            "реализовано"
+          ],
+          "status": "Draft",
+          "priority": "Must",
+          "type": "FR",
+          "project_id": "9343b2d6-bfeb-4c9e-b4db-1fd36edb758c",
+          "code": "FR 4.1",
+          "parent_id": "cba8ac26-a1b9-4157-a6fc-79fa48aa0175",
+          "order": 0
+        }
+      }
+    ],
+    "views": [],
+    "description": "Черновик требований к самому ReqBase.",
+    "customer": "",
+    "document_version": "0.1",
+    "document_date": "2026-11-15",
+    "authors": [
+      "Системный анализ ReqBase"
+    ],
+    "locale": "ru",
+    "title": "ReqBase · Требования к продукту",
+    "prefix": "REQBASE"
+  }
+}

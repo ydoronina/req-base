@@ -1,0 +1,26 @@
+services:
+  reqbase:
+    build: .
+    ports:
+      - "127.0.0.1:${REQBASE_PORT:-8000}:8000"
+    environment:
+      REQBASE_API_TOKEN: ${REQBASE_API_TOKEN:?Set REQBASE_API_TOKEN in .env}
+      KROKI_URL: ${KROKI_URL:-http://kroki:8000}
+      REQBASE_DATA: /data
+      REQBASE_DEMO: ${REQBASE_DEMO:-0}
+      REQBASE_UI_HOSTS: ${REQBASE_UI_HOSTS:-}
+    volumes:
+      - reqbase-data:/data
+    depends_on: [kroki]
+  kroki:
+    image: yuzutech/kroki:0.34.0
+    environment:
+      KROKI_MERMAID_HOST: mermaid
+      KROKI_SAFE_MODE: secure
+    depends_on: [mermaid]
+  mermaid:
+    image: yuzutech/kroki-mermaid:0.34.0
+    environment:
+      KROKI_MERMAID_SAFE_MODE: secure
+volumes:
+  reqbase-data:
